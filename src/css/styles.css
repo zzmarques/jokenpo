@@ -35,17 +35,10 @@ body {
     
 }
 
-.text {
+.logo {
     display: flex;
     flex-flow: column nowrap;
     margin-left: 20px;
-}
-
-.text span {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 0.9;
-    color:  white;
 }
 
 .score {
@@ -73,7 +66,6 @@ body {
     font-weight: 700;
     font-size: 50px;
     color: hsl(229, 25%, 31%);
-   
 }
 
 .container_btns {
