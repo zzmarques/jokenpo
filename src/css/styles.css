@@ -1,0 +1,328 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center top, hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 20px auto;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 89%;
+    height: 130px;
+
+    border-radius: 8px;
+    border:  5px solid hsl(217, 16%, 45%);
+    
+}
+
+.text {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 20px;
+}
+
+.text span {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 0.9;
+    color:  white;
+}
+
+.score {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 8px;
+
+    background: white;
+}
+
+.score span{
+    font-weight: 500;
+    font-size: 22px;
+    color: hsl(229, 64%, 46%);
+}
+
+.score p {
+    line-height: 0.8;
+    font-weight: 700;
+    font-size: 50px;
+    color: hsl(229, 25%, 31%);
+   
+}
+
+.container_btns {
+    background: url("../assets/images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    position: relative;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 89%;
+    height: 250px;
+    margin-top: 110px;
+    margin-bottom: 50px;
+}
+
+.container_btns img {
+    height: 55px;
+}
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: hsl(280, 9%, 87%);
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 10%);
+    border-radius: 50%;
+    z-index: -2;
+    transition: all 0.3s;
+}
+
+.btn:hover::after {
+    width: 180%;
+    height: 180%;
+}
+
+.paper {
+    position: relative;
+    bottom: 100px;
+}
+
+
+.paper::before {
+    content:  "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    z-index: -1;
+}
+
+.scissors {
+    position: relative;
+    bottom: 100px;
+}
+
+.scissors::before {
+    content:  "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    
+    z-index: -1;
+}
+
+.rock {
+    position: relative;
+    top: 60px;
+}
+
+.rock::before {
+    content:  "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    z-index: -1;
+}
+
+.btn_rules {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+
+    width: 120px;
+    height: 40px;
+    margin-bottom:  20px;
+    border-radius: 6px;
+    border: 2px solid white;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.btn_rules:hover {
+    color:  hsl(229, 25%, 31%);;
+    background: white;
+    
+}
+
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 89%;
+    height: 250px;
+    margin-top: 30px;
+}
+
+.box_btn {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 140px;
+    height: 240px;
+}
+
+.box_btn span {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.game .paper,
+.game .scissors,
+.game .rock {
+    bottom: 0;
+    top: 0;
+}
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: hsl(220, 48%, 18%);
+}
+
+.result {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 89%;
+    height: 130px;
+}
+.result h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    color: white;
+}
+
+.result .btn_reset {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    
+    
+    border-radius: 8px;
+    margin-top: 10px;
+
+    font-weight: 500;
+    text-transform: uppercase;
+    color: hsl(229, 64%, 46%);
+    background: white;
+}
+
+
+.rules {
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+}
+
+.regras {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.rules_header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 30px 0px;
+}
+
+.rules h1 {
+    font-size: 2.5em;
+    color:  hsl(229, 25%, 31%);
+    text-transform: uppercase;
+}
+
+.rules .close {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.rules .close:hover {
+    transform: scale(1.6);
+}
+
+
+
