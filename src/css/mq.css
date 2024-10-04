@@ -37,6 +37,10 @@
         height: 400px;
     }
 
+    .rules .close {
+        margin-bottom: 0px;
+    }
+
 
     .rules h1 {
         font-size: 2em;
