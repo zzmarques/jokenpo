@@ -4,7 +4,7 @@
     <img src="src/assets/images/jokenpo.png">
 </figure>
 
-📝 **Sobre o Projeto**
+## 📝 **Sobre o Projeto**
 
 
 <p>
